@@ -1,5 +1,5 @@
 
-const blockedSites = ["pornhub.com", "xvideos.com", "redtube.com"];
+const blockedSites = ["https://www.pornhub.com/", "https://www.xvideos.com/", "https://www.redtube.com/"];
 
 chrome.storage.sync.set({ blockedSites: blockedSites }, function() {
     console.log('Blocked sites initialized:', blockedSites);
