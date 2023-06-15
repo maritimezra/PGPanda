@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Experimental PG Panda",
+  "name": "PG Panda",
   "version": "1.0",
   "description": "A Google Chrome extension for parental control.",
   "permissions": [
@@ -9,8 +9,10 @@
     "webNavigation",
     "webRequest",
     "storage",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "identity"
   ],
+  
   "host_permissions": [
     "http://*/*",
     "https://*/*"
@@ -18,5 +20,24 @@
   "background": {
     "service_worker": "background.js"
     
+    
+  },
+  
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "oauth2": {
+    "client_id": "156122766890-rb6f90t9ib05vn69e8ojjbm5bj5aadga.apps.googleusercontent.com",
+    "scopes": [
+      "profile",
+      "email"
+    ]
   }
+  
+      
+
+    
+  
 }

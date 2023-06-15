@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blocked!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff5a5f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .btn-override {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn-safety {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Blocked!</h1>
+    <img class="icon" src="icon.png" alt="Blocked Icon">
+    <h1>Website Blocked!</h1>
+    <p>Oops, it seems like you've reached a blocked website!</p>
+    <p>The PG Panda parental control extension is here to help you have a safe and enjoyable online experience.</p>
+    <p>Some websites may contain content that is not suitable for children, and PG Panda is designed to protect you from accessing those websites.</p>
+    <p>Remember, the internet is a vast and exciting place filled with many wonderful things to explore. However, it's important to stay safe and make good choices.</p>
+    <p>If you have any questions about the blocked website or need assistance, don't hesitate to talk to your parent or guardian. They are here to guide and support you.</p>
+    <p>Let's continue to explore the internet responsibly and make the most out of our online adventures!</p>
+    
+    <div class="button-container">
+        <button class="btn-override" id="override-button">Override</button>
+        <button class="btn-safety" id="safety-button">Take Me to Safety</button>
+    </div>
+    <script src="blocked.js"></script>
+    <script src="firebase-app.js"></script>
+    <script src="firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+
+
 </body>
 </html>
