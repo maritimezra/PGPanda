@@ -14,4 +14,4 @@ const firebaseConfig = {
   catch(e){
     console.log("Firebase not initialized", e);
   }
-  //export default firebase;
+  
