@@ -29,12 +29,12 @@
     "128": "icon.png"
   },
   "oauth2": {
-    "client_id": "156122766890-rb6f90t9ib05vn69e8ojjbm5bj5aadga.apps.googleusercontent.com",
-    "scopes": [
-      "profile",
-      "email"
-    ]
+    "client_id": "127198853640-shm14h6tfqde61tkrvvl747bt5j42fbl.apps.googleusercontent.com",
+    "scopes":[
+      ""
+  ]
   }
+  
   
       
 
