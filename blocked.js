@@ -1,4 +1,4 @@
-document.getElementById('safety-button').addEventListener('click', function() {
+document.getElementById('safety-button').addEventListener('click', function(){
     chrome.tabs.create({ url: 'chrome://newtab' });
     window.close();
 });
