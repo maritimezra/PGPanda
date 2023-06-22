@@ -35,11 +35,5 @@
     "scopes":[
       "https://www.googleapis.com/auth/userinfo.email"
   ]
-  }
-  
-  
-      
-
-    
-  
+  } 
 }

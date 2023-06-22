@@ -42,3 +42,7 @@ document.getElementById('remove-button').addEventListener('click', function() {
      
     }
 });
+document.getElementById('save-button').addEventListener('click', function() {
+  chrome.tabs.create({ url: 'chrome://newtab' });
+  window.close();
+});
