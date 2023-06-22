@@ -10,12 +10,14 @@
     "webRequest",
     "storage",
     "declarativeNetRequest",
-    "identity"
+    "identity",
+    "identity.email"
   ],
   
   "host_permissions": [
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "<all_urls>"
   ],
   "background": {
     "service_worker": "background.js"
@@ -31,7 +33,7 @@
   "oauth2": {
     "client_id": "127198853640-shm14h6tfqde61tkrvvl747bt5j42fbl.apps.googleusercontent.com",
     "scopes":[
-      ""
+      "https://www.googleapis.com/auth/userinfo.email"
   ]
   }
   
