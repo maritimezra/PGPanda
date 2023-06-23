@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    
+    .signup-container {
+      width: 400px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .signup-container input[type="text"],
+    .signup-container input[type="password"],
+    .signup-container input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .signup-container button {
+      width: 100%;
+      padding: 8px;
+      background-color: #9c27b0;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .signup-container button:hover {
+      background-color: #7b1fa2;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      <button type="submit" id="signup-button">Sign Up</button>
+    </form>
+  </div>
+  <script src="firebase-app.js"></script>
+  <script src="firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+</body>
+</html>
