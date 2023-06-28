@@ -1,5 +1,3 @@
-//import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-
 const firebaseConfig = {
   apiKey: "AIzaSyBVXDQVIiL7pU5UXAhbBH_Yah3w1V910oU",
   authDomain: "pgpanda--auth.firebaseapp.com",
@@ -17,7 +15,6 @@ const firebaseConfig = {
     console.log("Firebase not initialized", e);
   }
 
-  // Rest of your code...
 
 function registerUser() {
   var email = document.getElementById('email').value;
@@ -25,10 +22,9 @@ function registerUser() {
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(userCredential) {
-      // User registration successful
       var user = userCredential.user;
       console.log('Registered user:', user);
-      //alert("Registration Successful!");
+      chrome.storage.sync.set({ registered: true }, function() {});;
       chrome.tabs.create({ url: 'login.html' });
       window.close();
     })
@@ -46,18 +42,17 @@ function loginUser() {
 
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function(userCredential) {
-      // User login successful
       var user = userCredential.user;
       console.log('Logged in user:', user);
-      //alert("Log in successful")
       chrome.tabs.create({ url: 'configuration.html' });
       window.close();
     })
+
     .catch(function(error) {
-      // Handle login errors
       var errorCode = error.code;
       var errorMessage = error.message;
       console.error('Login error:', errorCode, errorMessage);
+      alert('Incorrect email/password');
     });
 }
 
@@ -65,7 +60,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var signupButton = document.getElementById('signup-button');
   if (signupButton) {
     signupButton.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the form from submitting normally
+      event.preventDefault(); 
       registerUser();
     });
   }
@@ -73,7 +68,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var loginButton = document.getElementById('login-button');
   if (loginButton) {
     loginButton.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the form from submitting normally
+      event.preventDefault(); 
       loginUser();
     });
   }
