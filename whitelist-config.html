@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitelist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .whitelist-sites {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .whitelist-sites ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .whitelist-sites li {
+            margin-bottom: 5px;
+        }
+
+        .whitelist-sites label {
+            display: flex;
+            align-items: center;
+        }
+
+        .whitelist-sites input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #remove-button {
+            background-color:  red;
+            color: white;
+        }
+
+        #add-button {
+            background-color: blue;
+            color: white;
+        }
+        #save-button{
+            background-color: rgb(100, 236, 100);
+            color: white;
+        }
+        .site-item {
+  display: flex;
+  align-items: center;
+}
+
+.site-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>White List</h1>
+
+        <div class="whitelist-sites">
+            <ul id="whitelisted-sites-list">
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button id="add-button">Add</button>
+            <button id="remove-button">Remove</button>
+            <button id="save-button">Save</button>
+        </div>
+    </div>
+    <script src="whitelist-config.js"></script>
+</body>
+</html>

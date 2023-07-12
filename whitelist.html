@@ -3,101 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitelist</title>
+    <title>For You</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f1f1f1;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 350px;
-            height: 600px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-            padding: 20px;
-            box-sizing: border-box;
             text-align: center;
         }
 
-        h1 {
+        ul {
+            list-style: none; /* Remove the default list-style */
+            padding: 0; /* Remove any padding */
+            margin: 0; /* Remove any margin */
+        }
+        ul li a {
+            font-size: 16px; /* Set the desired font size */
+        }
+        h2 {
+            font-size: 24px;
             font-weight: bold;
-            margin-top: 0;
-        }
-
-        .whitelist-sites {
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .whitelist-sites ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .whitelist-sites li {
-            margin-bottom: 5px;
-        }
-
-        .whitelist-sites label {
-            display: flex;
-            align-items: center;
-        }
-
-        .whitelist-sites input[type="checkbox"] {
-            margin-right: 5px;
+            margin: 0 0 20px;
         }
 
         .button-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .button-container button {
             padding: 10px 20px;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
+            margin-right: 10px;
+            
         }
-
-        #remove-button {
-            background-color:  red;
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        #configure-button{
+            background-color: green;
             color: white;
         }
-
-        #add-button {
-            background-color: blue;
-            color: white;
-        }
-        #proceed-button{
-            background-color: rgb(100, 236, 100);
+        #close-button{
+            background-color: gray;
             color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Whitelisted Sites</h1>
+    <img class="icon" src="icon.png" alt="Blocked Icon">
+    
+        <h2>Here are some sites recommended for you</h2>
 
-        <div class="whitelist-sites">
-            <ul id="whitelisted-sites-list">
-            </ul>
-        </div>
-
+        
+        <ul id="whitelisted-sites-list"></ul>
         <div class="button-container">
-            <button id="add-button">Add</button>
-            <button id="remove-button">Remove</button>
-            <button id="proceed-button">Proceed</button>
+            <button id="configure-button">Configure</button>
+            <button id="close-button">Close</button>
         </div>
-    </div>
+    
+
     <script src="whitelist.js"></script>
+    <script src="background.js"></script>
 </body>
 </html>
