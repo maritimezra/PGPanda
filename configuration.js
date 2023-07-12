@@ -39,6 +39,9 @@ document.getElementById('remove-button').addEventListener('click', function() {
       label.appendChild(checkbox);
       label.appendChild(document.createTextNode(site));
       listItem.appendChild(label);
+
+      var blockedSitesList = document.getElementById('blocked-sites-list');
+        blockedSitesList.appendChild(listItem);
      
     }
 });

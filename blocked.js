@@ -1,5 +1,5 @@
 document.getElementById('safety-button').addEventListener('click', function(){
-    chrome.tabs.create({ url: 'chrome://newtab' });
+    chrome.tabs.create({ url: 'whitelist.html' });
     window.close();
 });
 
